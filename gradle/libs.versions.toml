@@ -3,9 +3,9 @@ agp = "8.1.4"
 dokka = "1.9.10"
 firebaseAnalyticsKtx = "21.5.0"
 kermit = "2.0.2"
-kmpLaunchpadUtilsDomain = "0.0.2"
+kwikstart-core = "0.1.0"
 koin = "3.5.3"
-kotlin = "1.9.21"
+kotlin = "1.9.22"
 kotlinxCoroutinesCore = "1.7.3"
 kotlinxDatetime = "0.5.0"
 kotlinxSerializationJson = "1.6.2"
@@ -15,12 +15,12 @@ napier = "2.6.1"
 
 compile-sdk = "34"
 min-sdk = "24"
-launchpad-utils = "0.0.2"
+kwikstart-utils = "0.1.0"
 
 [libraries]
 firebase-analytics-ktx = { module = "com.google.firebase:firebase-analytics-ktx", version.ref = "firebaseAnalyticsKtx" }
 kermit = { module = "co.touchlab:kermit", version.ref = "kermit" }
-kmp-launchpad-utils-domain = { group = "com.github.bottlerocketstudios", name = "kmp-launchpad-utils-domain", version.ref = "kmpLaunchpadUtilsDomain" }
+kwikstart-core = { group = "com.github.sheltek", name = "kwikstart-core", version.ref = "kwikstart-core" }
 koin-core = { group = "io.insert-koin", name = "koin-core", version.ref = "koin" }
 kotlin-reflect = { module = "org.jetbrains.kotlin:kotlin-reflect", version.ref = "kotlin" }
 kotlin-stdlib-jdk7 = { group = "org.jetbrains.kotlin", name = "kotlin-stdlib-jdk7", version.ref = "kotlin" }

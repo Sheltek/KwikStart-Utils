@@ -36,7 +36,7 @@ kotlin {
         }
         commonMain.dependencies {
             implementation(libs.kermit)
-            implementation(libs.kmp.launchpad.utils.domain)
+            implementation(libs.kwikstart.core)
             implementation(libs.koin.core)
             implementation(libs.kotlin.reflect)
             implementation(libs.kotlin.stdlib.jdk7)
@@ -51,7 +51,7 @@ kotlin {
 }
 
 android {
-    namespace = "com.bottlerocketstudios.launchpad.utils"
+    namespace = "com.sheltek.kwikstart.utils"
     compileSdk = libs.versions.compile.sdk.get().toInt()
     defaultConfig {
         minSdk = libs.versions.min.sdk.get().toInt()
@@ -65,13 +65,13 @@ ktlint {
 }
 
 group = extra["publishing.group"] as String
-version = libs.versions.launchpad.utils.get()
+version = libs.versions.kwikstart.utils.get()
 
 publishing {
     repositories {
         maven {
             name = "GitHubPackages"
-            url = uri("https://maven.pkg.github.com/BottleRocketStudios/KMP-LaunchPad-Utils")
+            url = uri("https://maven.pkg.github.com/ShelTek/KwikStart-Utils")
             credentials {
                 username = System.getenv("REPO_READ_WRITE_USER")
                 password = System.getenv("REPO_READ_WRITE_TOKEN")

@@ -9,7 +9,7 @@ pluginManagement {
 
 dependencyResolutionManagement {
     repositories {maven {
-        url = uri("https://maven.pkg.github.com/BottleRocketStudios/kmp-ignite")
+        url = uri("https://maven.pkg.github.com/sheltek/KwikStart-utils")
         credentials {
             username = System.getenv("REPO_READ_USER")
             password = System.getenv("REPO_READ_TOKEN")
@@ -21,5 +21,5 @@ dependencyResolutionManagement {
     }
 }
 
-rootProject.name = "Launchpad_Utils"
-include(":kmp-launchpad-utils")
+rootProject.name = "KwikStart-Utils"
+include(":kwikstart-utils")
