@@ -1,7 +1,7 @@
-package com.bottlerocketstudios.launchpad.utils.logger
+package com.sheltek.kwikstart.utils.logger
 
-import com.bottlerocketstudios.launchpadutilsdomain.BuildConfigProvider
-import com.bottlerocketstudios.launchpadutilsdomain.logger.LoggingManager
+import com.sheltek.kwikstart.core.BuildConfigProvider
+import com.sheltek.kwikstart.core.logger.LoggingManager
 import io.github.aakira.napier.Napier
 import org.koin.core.component.KoinComponent
 import org.koin.core.component.inject

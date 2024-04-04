@@ -1,6 +1,7 @@
-package com.bottlerocketstudios.launchpad.utils.analytics
+package com.sheltek.kwikstart.utils.analytics
 
-import com.bottlerocketstudios.launchpadutilsdomain.analytics.UserProperty
+import com.sheltek.kwikstart.core.analytics.UserProperty
+
 
 /** Data holder for generic user properties logged in various analytics SDKs. */
 data class CustomUserProperty(

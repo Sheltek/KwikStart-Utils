@@ -1,14 +1,14 @@
-package com.bottlerocketstudios.launchpad.utils.analytics
+package com.sheltek.kwikstart.utils.analytics
 
 import android.annotation.SuppressLint
 import android.content.Context
 import android.os.Bundle
-import com.bottlerocketstudios.launchpadutilsdomain.analytics.AnalyticsEvent
-import com.bottlerocketstudios.launchpadutilsdomain.analytics.UserProperty
 import com.google.android.gms.tasks.Task
 import com.google.firebase.analytics.FirebaseAnalytics
 import com.google.firebase.analytics.FirebaseAnalytics.ConsentStatus
 import com.google.firebase.analytics.FirebaseAnalytics.ConsentType
+import com.sheltek.kwikstart.core.analytics.AnalyticsEvent
+import com.sheltek.kwikstart.core.analytics.UserProperty
 import org.koin.core.component.KoinComponent
 import org.koin.core.component.inject
 

@@ -1,9 +1,9 @@
-package com.bottlerocketstudios.launchpad.utils.analytics
+package com.sheltek.kwikstart.utils.analytics
 
 import android.os.Bundle
-import com.bottlerocketstudios.launchpadutilsdomain.analytics.AnalyticsInterface
 import com.google.android.gms.tasks.Task
 import com.google.firebase.analytics.FirebaseAnalytics
+import com.sheltek.kwikstart.core.analytics.AnalyticsInterface
 
 interface FirebaseAnalyticsInterface : AnalyticsInterface {
     val sessionId: Task<Long?>

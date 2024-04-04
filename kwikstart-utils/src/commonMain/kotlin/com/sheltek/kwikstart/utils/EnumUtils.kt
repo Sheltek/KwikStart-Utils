@@ -1,4 +1,4 @@
-package com.bottlerocketstudios.launchpad.utils
+package com.sheltek.kwikstart.utils
 
 /**
  * Oftentimes we have enum classes where the actual value we set as a singular param that references an API-significant String value for example.

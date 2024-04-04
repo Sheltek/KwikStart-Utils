@@ -1,4 +1,4 @@
-package com.bottlerocketstudios.launchpad.utils.coroutine
+package com.sheltek.kwikstart.utils.coroutine
 
 import kotlinx.coroutines.ExperimentalCoroutinesApi
 import kotlinx.coroutines.delay

@@ -1,4 +1,4 @@
-package com.bottlerocketstudios.launchpad.utils.coroutine
+package com.sheltek.kwikstart.utils.coroutine
 
 import kotlinx.coroutines.CoroutineDispatcher
 import kotlinx.coroutines.Dispatchers
