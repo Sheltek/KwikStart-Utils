@@ -1,9 +1,17 @@
 [versions]
+# Publishing version
+launchpad-utils = "0.1.0"
+
+# Android SDK versions
+compile-sdk = "34"
+min-sdk = "24"
+
+# Depedency versions
 agp = "8.1.4"
 dokka = "1.9.10"
 firebaseAnalyticsKtx = "21.5.0"
 kermit = "2.0.2"
-kmpLaunchpadUtilsDomain = "0.0.2"
+kmpLaunchpadUtilsDomain = "0.1.0"
 koin = "3.5.3"
 kotlin = "1.9.21"
 kotlinxCoroutinesCore = "1.7.3"
@@ -13,9 +21,6 @@ ktLint-gradle = "11.6.1"
 kvault = "1.12.0"
 napier = "2.6.1"
 
-compile-sdk = "34"
-min-sdk = "24"
-launchpad-utils = "0.0.2"
 
 [libraries]
 firebase-analytics-ktx = { module = "com.google.firebase:firebase-analytics-ktx", version.ref = "firebaseAnalyticsKtx" }
