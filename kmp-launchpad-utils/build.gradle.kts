@@ -78,8 +78,8 @@ publishing {
             name = "GitHubPackages"
             url = uri("https://maven.pkg.github.com/BottleRocketStudios/KMP-LaunchPad-Utils")
             credentials {
-                username = System.getenv("REPO_READ_WRITE_USER") ?: System.getenv("GH_USERNAME")
-                password = System.getenv("REPO_READ_WRITE_TOKEN") ?: System.getenv("GH_PASSWORD")
+                username = System.getenv("REPO_READ_WRITE_USER") ?: System.getenv("GH_PUBLISH_USERNAME")
+                password = System.getenv("REPO_READ_WRITE_TOKEN") ?: System.getenv("GH_PUBLISH_PASSWORD")
             }
         }
     }
