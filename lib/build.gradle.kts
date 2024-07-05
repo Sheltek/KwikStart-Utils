@@ -12,12 +12,8 @@ kotlin {
 
     androidTarget {
         publishAllLibraryVariants()
-        compilations.all {
-            kotlinOptions {
-                jvmTarget = "1.8"
-            }
-        }
     }
+    jvmToolchain(17)
 
     listOf(
         iosX64(),
@@ -29,6 +25,8 @@ kotlin {
             isStatic = true
         }
     }
+
+    jvm("desktop")
 
     sourceSets {
         androidMain.dependencies {
@@ -58,11 +56,11 @@ android {
     }
 }
 
-ktlint {
-    verbose.set(true)
-    outputToConsole.set(true)
-    ignoreFailures.set(true)
-}
+//ktlint {
+//    verbose.set(true)
+//    outputToConsole.set(true)
+//    ignoreFailures.set(true)
+//}
 
 group = extra["publishing.group"] as String
 version = libs.versions.kwikstart.utils.get()

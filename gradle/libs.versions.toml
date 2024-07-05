@@ -15,7 +15,7 @@ napier = "2.6.1"
 
 compile-sdk = "34"
 min-sdk = "24"
-kwikstart-utils = "0.1.0"
+kwikstart-utils = "0.3.0"
 
 [libraries]
 firebase-analytics-ktx = { module = "com.google.firebase:firebase-analytics-ktx", version.ref = "firebaseAnalyticsKtx" }
