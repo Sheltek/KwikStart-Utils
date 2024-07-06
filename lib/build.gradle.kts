@@ -1,3 +1,5 @@
+import org.jetbrains.kotlin.gradle.ExperimentalKotlinGradlePluginApi
+
 plugins {
     alias(libs.plugins.androidLibrary)
     alias(libs.plugins.dokka)
@@ -8,7 +10,15 @@ plugins {
 }
 
 kotlin {
-    applyDefaultHierarchyTemplate()
+    @OptIn(ExperimentalKotlinGradlePluginApi::class)
+    applyDefaultHierarchyTemplate() {
+        common {
+            group("mobile") {
+                withIos()
+                withAndroidTarget()
+            }
+        }
+    }
 
     androidTarget {
         publishAllLibraryVariants()
