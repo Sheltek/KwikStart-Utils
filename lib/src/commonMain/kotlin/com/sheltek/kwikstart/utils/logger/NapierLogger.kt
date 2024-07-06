@@ -6,11 +6,10 @@ import io.github.aakira.napier.Napier
 import org.koin.core.component.KoinComponent
 import org.koin.core.component.inject
 
-class NapierLogger : LoggingManager, KoinComponent {
-    private val buildConfigProvider: BuildConfigProvider by inject()
+class NapierLogger(private val loggingEnabled: Boolean) : LoggingManager {
 
     override fun d(tag: String?, message: String?, t: Throwable?) {
-        if (buildConfigProvider.isDebugOrInternalBuild) {
+        if (loggingEnabled) {
             tag?.let {
                 Napier.d(throwable = t, tag = tag, message = message.orEmpty())
             } ?: Napier.d(throwable = t) { message.orEmpty() }
@@ -18,7 +17,7 @@ class NapierLogger : LoggingManager, KoinComponent {
     }
 
     override fun e(tag: String?, message: String?, t: Throwable?) {
-        if (buildConfigProvider.isDebugOrInternalBuild) {
+        if (loggingEnabled) {
             tag?.let {
                 Napier.e(throwable = t, tag = tag, message = message.orEmpty())
             } ?: Napier.e(throwable = t) { message.orEmpty() }
@@ -26,7 +25,7 @@ class NapierLogger : LoggingManager, KoinComponent {
     }
 
     override fun i(tag: String?, message: String?, t: Throwable?) {
-        if (buildConfigProvider.isDebugOrInternalBuild) {
+        if (loggingEnabled) {
             tag?.let {
                 Napier.i(throwable = t, tag = tag, message = message.orEmpty())
             } ?: Napier.i(throwable = t) { message.orEmpty() }
@@ -34,7 +33,7 @@ class NapierLogger : LoggingManager, KoinComponent {
     }
 
     override fun v(tag: String?, message: String?, t: Throwable?) {
-        if (buildConfigProvider.isDebugOrInternalBuild) {
+        if (loggingEnabled) {
             tag?.let {
                 Napier.v(throwable = t, tag = tag, message = message.orEmpty())
             } ?: Napier.v(throwable = t) { message.orEmpty() }
@@ -42,7 +41,7 @@ class NapierLogger : LoggingManager, KoinComponent {
     }
 
     override fun w(tag: String?, message: String?, t: Throwable?) {
-        if (buildConfigProvider.isDebugOrInternalBuild) {
+        if (loggingEnabled) {
             tag?.let {
                 Napier.w(throwable = t, tag = tag, message = message.orEmpty())
             } ?: Napier.w(throwable = t, message = message.orEmpty())

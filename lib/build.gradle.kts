@@ -25,33 +25,35 @@ kotlin {
     }
     jvmToolchain(17)
 
-    listOf(
-        iosX64(),
-        iosArm64(),
-        iosSimulatorArm64()
-    ).forEach {
-        it.binaries.framework {
-            baseName = "shared"
-            isStatic = true
-        }
-    }
-
     jvm("desktop")
+    task("testClasses")
+
+    iosX64()
+    iosArm64()
+    iosSimulatorArm64()
 
     sourceSets {
         androidMain.dependencies {
             implementation(libs.firebase.analytics.ktx)
         }
         commonMain.dependencies {
-            implementation(libs.kermit)
-            implementation(libs.kwikstart.core)
-            implementation(libs.koin.core)
+            // Kotlin
             implementation(libs.kotlin.reflect)
             implementation(libs.kotlin.stdlib.jdk7)
+
+            // KotlinX
             implementation(libs.kotlinx.coroutines.core)
             implementation(libs.kotlinx.datetime)
             implementation(libs.kotlinx.serialization.json)
-            implementation(libs.kvault)
+
+            // Koin
+            implementation(libs.koin.core)
+
+            // Kwikstart
+            implementation(libs.kwikstart.core)
+
+            // Logging
+            implementation(libs.kermit)
             implementation(libs.napier)
         }
         iosMain.dependencies {}
@@ -66,11 +68,11 @@ android {
     }
 }
 
-//ktlint {
-//    verbose.set(true)
-//    outputToConsole.set(true)
-//    ignoreFailures.set(true)
-//}
+ktlint {
+    verbose.set(true)
+    outputToConsole.set(true)
+    ignoreFailures.set(true)
+}
 
 group = extra["publishing.group"] as String
 version = libs.versions.kwikstart.utils.get()
@@ -81,8 +83,8 @@ publishing {
             name = "GitHubPackages"
             url = uri("https://maven.pkg.github.com/ShelTek/KwikStart-Utils")
             credentials {
-                username = System.getenv("REPO_READ_WRITE_USER")
-                password = System.getenv("REPO_READ_WRITE_TOKEN")
+                username = System.getenv("REPO_READ_WRITE_USER") ?: System.getenv("GH_PUBLISH_USERNAME")
+                password = System.getenv("REPO_READ_WRITE_TOKEN") ?: System.getenv("GH_PUBLISH_PASSWORD")
             }
         }
     }

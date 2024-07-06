@@ -1,11 +1,19 @@
 [versions]
+# Publishing version
+kwikstart-utils = "0.3.0"
+
+# Android SDK versions
+compile-sdk = "34"
+min-sdk = "24"
+
+# Depedency versions
 agp = "8.1.4"
 dokka = "1.9.10"
 firebaseAnalyticsKtx = "21.5.0"
 kermit = "2.0.2"
 kwikstart-core = "0.1.0"
 koin = "3.5.3"
-kotlin = "1.9.22"
+kotlin = "1.9.23"
 kotlinxCoroutinesCore = "1.7.3"
 kotlinxDatetime = "0.5.0"
 kotlinxSerializationJson = "1.6.2"
@@ -13,9 +21,6 @@ ktLint-gradle = "11.6.1"
 kvault = "1.12.0"
 napier = "2.6.1"
 
-compile-sdk = "34"
-min-sdk = "24"
-kwikstart-utils = "0.3.0"
 
 [libraries]
 firebase-analytics-ktx = { module = "com.google.firebase:firebase-analytics-ktx", version.ref = "firebaseAnalyticsKtx" }

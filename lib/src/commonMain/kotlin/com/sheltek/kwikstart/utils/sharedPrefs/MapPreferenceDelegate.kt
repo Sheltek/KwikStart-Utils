@@ -1,12 +1,11 @@
 package com.sheltek.kwikstart.utils.sharedPrefs
 
-import com.liftric.kvault.KVault
 import kotlin.properties.ReadWriteProperty
 import kotlin.reflect.KProperty
 
-class MapPreferenceDelegate(private val store: KVault?) : ReadWriteProperty<Any, Map<String, String>> {
+class MapPreferenceDelegate(private val store: PreferenceStore) : ReadWriteProperty<Any, Map<String, String>> {
     override fun getValue(thisRef: Any, property: KProperty<*>): Map<String, String> {
-        val hashMapStr = store?.string(property.name)
+        val hashMapStr = store.string(property.name)
         return if (hashMapStr != null) {
             if (hashMapStr.isNotEmpty()) {
                 val hashMap = hashMapStr.split(",").associate {
@@ -27,6 +26,6 @@ class MapPreferenceDelegate(private val store: KVault?) : ReadWriteProperty<Any,
             .replace("{", "")
             .replace("}", "")
             .replace(" ", "")
-        store?.set(property.name, updatedHashMap)
+        store.set(property.name, updatedHashMap)
     }
 }
