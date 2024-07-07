@@ -8,16 +8,19 @@ pluginManagement {
 }
 
 dependencyResolutionManagement {
-    repositories {maven {
-        url = uri("https://maven.pkg.github.com/sheltek/KwikStart-utils")
-        credentials {
-            username = System.getenv("REPO_READ_USER") ?: System.getenv("GH_READ_USERNAME")
-            password = System.getenv("REPO_READ_TOKEN") ?: System.getenv("GH_READ_PASSWORD")
-        }
-    }
-//        mavenLocal()
+    @Suppress("UnstableApiUsage")
+    repositories {
+        mavenLocal()
         google()
         mavenCentral()
+
+//        maven {
+//            url = uri("https://maven.pkg.github.com/sheltek/KwikStart-utils")
+//            credentials {
+//                username = System.getenv("REPO_READ_USER") ?: System.getenv("GH_READ_USERNAME")
+//                password = System.getenv("REPO_READ_TOKEN") ?: System.getenv("GH_READ_PASSWORD")
+//            }
+//        }
     }
 }
 

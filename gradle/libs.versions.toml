@@ -11,7 +11,7 @@ agp = "8.1.4"
 dokka = "1.9.10"
 firebaseAnalyticsKtx = "21.5.0"
 kermit = "2.0.2"
-kwikstart-core = "0.1.0"
+kwikstart-core = "0.2.0"
 koin = "3.5.3"
 kotlin = "1.9.23"
 kotlinxCoroutinesCore = "1.7.3"
@@ -26,6 +26,7 @@ napier = "2.6.1"
 firebase-analytics-ktx = { module = "com.google.firebase:firebase-analytics-ktx", version.ref = "firebaseAnalyticsKtx" }
 kermit = { module = "co.touchlab:kermit", version.ref = "kermit" }
 kwikstart-core = { group = "com.github.sheltek", name = "kwikstart-core", version.ref = "kwikstart-core" }
+#kwikstart-core = { group = "com.github.sheltek", name = "lib", version.ref = "kwikstart-core" }
 koin-core = { group = "io.insert-koin", name = "koin-core", version.ref = "koin" }
 kotlin-reflect = { module = "org.jetbrains.kotlin:kotlin-reflect", version.ref = "kotlin" }
 kotlin-stdlib-jdk7 = { group = "org.jetbrains.kotlin", name = "kotlin-stdlib-jdk7", version.ref = "kotlin" }
