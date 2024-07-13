@@ -1,6 +1,6 @@
 package com.sheltek.kwikstart.utils.sharedPrefs
 
-import com.bottlerocketstudios.launchpad.utils.sharedPrefs.PreferenceStore
+import com.sheltek.kwikstart.utils.sharedPrefs.PreferenceStore
 import kotlin.properties.ReadWriteProperty
 import kotlin.reflect.KProperty
 

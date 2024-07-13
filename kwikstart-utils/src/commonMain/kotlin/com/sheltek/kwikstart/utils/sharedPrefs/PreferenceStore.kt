@@ -1,4 +1,4 @@
-package com.bottlerocketstudios.launchpad.utils.sharedPrefs
+package com.sheltek.kwikstart.utils.sharedPrefs
 
 interface PreferenceStore {
     // String

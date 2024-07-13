@@ -1,6 +1,6 @@
 package com.sheltek.kwikstart.utils.sharedPrefs
 
-import com.bottlerocketstudios.launchpad.utils.sharedPrefs.PreferenceStore
+import com.sheltek.kwikstart.utils.sharedPrefs.PreferenceStore
 import kotlinx.serialization.encodeToString
 import kotlinx.serialization.json.Json
 import kotlin.properties.ReadWriteProperty
