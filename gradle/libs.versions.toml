@@ -1,6 +1,6 @@
 [versions]
 # Publishing version
-kwikstart-utils = "0.3.0"
+kwikstart-utils = "0.3.1"
 
 # Android SDK versions
 compile-sdk = "34"
